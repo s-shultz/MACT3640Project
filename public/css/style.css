@@ -5,6 +5,26 @@ html {
     box-sizing: inherit;
   }
 
-  div {
-    border: 1px solid red;
+  h1, h2, h3, h4, h5, h6 {
+    font-family: "Playfair Display", serif;
+  }
+
+  body {
+    font-family: "Lato", sans-serif;
+  }
+
+  header {
+    margin: 0;
+    margin-bottom: 0;
+    padding: 0;
+  }
+
+  #hero {
+    color: aliceblue;
+    background-image: url('./images/darkbg.jpg');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    margin: 0;
+    padding: 0;
   }
