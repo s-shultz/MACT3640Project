@@ -28,7 +28,7 @@
         // let message = document.querySelector('#msg').value;
         let obj = {
             sub: "Contact Form Submission",
-            txt: `From ${document.querySelector('#first-name').value} ${document.querySelector('#last-name').value} \n Email ${document.querySelector('#mail').value} \n Message ${document.querySelector('#msg').value}`,
+            txt: `From ${document.querySelector('#first-name').value} ${document.querySelector('#last-name').value}\n Email ${document.querySelector('#mail').value}\n Message ${document.querySelector('#msg').value}`,
         };
 
         fetch('/mail', {
