@@ -3,7 +3,7 @@ import dotenv from 'dotenv';
 dotenv.config();
 
 let pool;
-port async function connect() {
+export async function connect() {
     let cString = "mysql://" + process.env.MYSQL_USER +
         ":" +
         process.env.MYSQL_PASSWORD +
