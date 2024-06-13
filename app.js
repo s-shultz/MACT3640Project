@@ -1,12 +1,11 @@
 import express from 'express';
 import dotenv from 'dotenv';
 import * as utils from './utils/utils.js';
+import * as db from './utils/database.js';
 
 dotenv.config();
 
-import * as db from './utils/database.js';
-
-let data = ["Project 1", "Project 2", "Project 3"];
+let data = ["Project 1, Project 2", "Project 3"];
 let projects = [];
 
 const app = express();
@@ -20,13 +19,14 @@ app.get("/", async (req, res, next) => {
   await db
     .connect()
     .then(async () => {
+      console.log("Connected to the database");
       //query the database for projects
       projects = await db.getAllProjects();
       console.log(projects);
       let featuredRand = Math.floor(Math.random() * projects.length);
       res.render("index.ejs", { featuredProject: projects[featuredRand] });
     })
-    .catch(next);
+
 
 });
 

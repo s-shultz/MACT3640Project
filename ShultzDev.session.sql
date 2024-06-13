@@ -1,1 +1,2 @@
-use GenartNFT;
+select *
+from projects;

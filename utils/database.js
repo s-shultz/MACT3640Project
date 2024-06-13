@@ -16,6 +16,8 @@ export async function connect() {
         process.env.MYSQL_PORT +
         "/" +
         process.env.MYSQL_DATABASE;
+
+    console.log(cString);
     pool = mysql
         .createPool(
             // cString  //digital ocean sql server
