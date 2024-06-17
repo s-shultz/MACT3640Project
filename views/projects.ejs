@@ -45,7 +45,8 @@
                     </ul>
                     <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
                         <li class="nav-item">
-                            <button id="testButton" type="button" class="btn btn-outline-light">Login</button>
+                            <button id="connect-wallet-button" type="button" class="btn btn-outline-light">Connect
+                                Wallet</button>
                         </li>
                     </ul>
                 </div>
@@ -58,16 +59,15 @@
             <div>
                 <h1>Projects</h1>
             </div>
-            <% projectArray.forEach((item, index)=> { %>
-                <div>
-                    <a href="/project/<%= index + 1 %>">
-                        <%= item %>
-                    </a>
-                </div>
-                <% }); %>
+            <div class="row g-4">
+                <% projectArray.forEach((item, index)=> { %>
+                    <div class="col-12 col-md-6 col-lg-4 mb-5">
+                        <%- include('projectCard', {ident: item.id, image: item.img_url, name: item.project_name}); %>
+                            <% console.log(item.img_url); %>
+                    </div>
+                    <% }); %>
+            </div>
         </div>
-
-
     </main>
 
 

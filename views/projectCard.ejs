@@ -1,12 +1,16 @@
 <div class="card card-cover h-100 overflow-hidden text-bg-dark rounded-4 shadow-lg"
-    style="background-size: cover; background-position: center; background-repeat: no-repeat;">
-    <img src="<%=image %>" class="card-img" alt="An image of the <%=name %> project">
+    style="background-image: url('<%= image %>'); background-size: cover; background-position: center; background-repeat: no-repeat;">
+    <img src="<%= image %>" class="card-img" alt="An image of the <%= name %> project">
     <div class="d-flex flex-column h-100 p-5 pb-3 text-white text-shadow-1">
         <h3 class="pt-5 mt-5 mb-4 display-6 lh-1 fw-bold">
-            <%=name %>
+            <%= name %>
         </h3>
     </div>
-    <div class="card-footer">
-        <a href="/project/<%= ident %>" class="btn btn-outline-light">View Project</a>
-    </div>
 </div>
+<div class="card-footer mt-3 mb-4">
+    <a href="/project/<%= ident %>" class="btn btn-outline-dark">View Project</a>
+</div>
+
+<script>
+    console.log('Image URL:', '<%=image %>');
+</script>

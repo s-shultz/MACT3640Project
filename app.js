@@ -31,6 +31,7 @@ app.get("/", async (req, res, next) => {
 });
 
 app.get("/projects", (req, res) => {
+  console.log("Projects route hit, rendering projects.ejs with projects:", projects);
   res.render("projects.ejs", { projectArray: projects });
 });
 
