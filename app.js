@@ -40,7 +40,7 @@ app.get("/project/:id", (req, res) => {
   if (id > data.length) {
     throw new Error("Project does not exist");
   }
-  res.render("project.ejs", { project: projects[id - 1], which: id });
+  res.render("project.ejs", { projectArray: data, which: id });
 });
 
 app.get("/contact", (req, res) => {

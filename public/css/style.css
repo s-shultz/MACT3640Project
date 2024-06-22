@@ -47,3 +47,11 @@ html {
   .bg-black {
     background-color: black !important;
   }
+
+  .text-secondary {
+      color: #AEB0B2 !important;
+    }
+
+    .card {
+      max-width: 100%;
+    }
