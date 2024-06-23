@@ -2,6 +2,7 @@ import express from 'express';
 import dotenv from 'dotenv';
 import * as utils from './utils/utils.js';
 import * as db from './utils/database.js';
+import cors from 'cors';
 
 dotenv.config();
 
@@ -11,6 +12,7 @@ let projects = [];
 const app = express();
 const port = 3000;
 
+app.use(cors());
 app.set("view engine", "ejs");
 app.use(express.json());
 app.use(express.static("public"));

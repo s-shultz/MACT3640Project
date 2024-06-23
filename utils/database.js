@@ -20,13 +20,13 @@ export async function connect() {
     console.log(cString);
     pool = mysql
         .createPool(
-            // cString  //digital ocean sql server
-            {
-                host: process.env.MYSQL_HOST,
-                user: process.env.MYSQL_USER,
-                password: process.env.MYSQL_PASSWORD,
-                database: process.env.MYSQL_DATABASE,
-            }
+            cString  //digital ocean sql server
+            // {
+            //     host: process.env.MYSQL_HOST,
+            //     user: process.env.MYSQL_USER,
+            //     password: process.env.MYSQL_PASSWORD,
+            //     database: process.env.MYSQL_DATABASE,
+            // }
         )
         .promise();
 }
